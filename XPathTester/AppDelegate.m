@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "TFHpple.h"
 
 @implementation AppDelegate
 
@@ -15,4 +16,18 @@
 	// Insert code here to initialize your application
 }
 
+- (NSArray *)XPathResultsFromString:(NSString *)string query:(NSString *)query
+{
+	NSData *stringUnicode = [string dataUsingEncoding:NSUnicodeStringEncoding];
+	TFHpple *doc = [[TFHpple alloc] initWithHTMLData:stringUnicode];
+	
+	NSArray *elements = [doc searchWithXPathQuery:query];
+	return elements;
+}
+
+- (IBAction)searchWithXPath:(id)sender {
+	NSArray *results =
+	[self XPathResultsFromString:self.dataView.string query:self.queryView.string];
+	self.resultsView.string = results.description;
+}
 @end

@@ -13,6 +13,10 @@
 		B3ADC7C116D84B6E00C6BA8E /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = B3ADC7BF16D84B6E00C6BA8E /* Credits.rtf */; };
 		B3ADC7C416D84B6E00C6BA8E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B3ADC7C316D84B6E00C6BA8E /* AppDelegate.m */; };
 		B3ADC7C716D84B6E00C6BA8E /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3ADC7C516D84B6E00C6BA8E /* MainMenu.xib */; };
+		B3ADC7FC16D84E8800C6BA8E /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = B3ADC7E416D84E8800C6BA8E /* TFHpple.m */; };
+		B3ADC7FD16D84E8800C6BA8E /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = B3ADC7E616D84E8800C6BA8E /* TFHppleElement.m */; };
+		B3ADC80316D84E8800C6BA8E /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = B3ADC7EF16D84E8800C6BA8E /* XPathQuery.m */; };
+		B3ADC80D16D851FE00C6BA8E /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3ADC80C16D851FE00C6BA8E /* libxml2.2.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +33,14 @@
 		B3ADC7C216D84B6E00C6BA8E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B3ADC7C316D84B6E00C6BA8E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B3ADC7C616D84B6E00C6BA8E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		B3ADC7E316D84E8800C6BA8E /* TFHpple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHpple.h; sourceTree = "<group>"; };
+		B3ADC7E416D84E8800C6BA8E /* TFHpple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHpple.m; sourceTree = "<group>"; };
+		B3ADC7E516D84E8800C6BA8E /* TFHppleElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHppleElement.h; sourceTree = "<group>"; };
+		B3ADC7E616D84E8800C6BA8E /* TFHppleElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHppleElement.m; sourceTree = "<group>"; };
+		B3ADC7EE16D84E8800C6BA8E /* XPathQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPathQuery.h; sourceTree = "<group>"; };
+		B3ADC7EF16D84E8800C6BA8E /* XPathQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPathQuery.m; sourceTree = "<group>"; };
+		B3ADC80A16D851B700C6BA8E /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		B3ADC80C16D851FE00C6BA8E /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = usr/lib/libxml2.2.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3ADC80D16D851FE00C6BA8E /* libxml2.2.dylib in Frameworks */,
 				B3ADC7B116D84B6E00C6BA8E /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -46,6 +59,9 @@
 		B3ADC7A416D84B6E00C6BA8E = {
 			isa = PBXGroup;
 			children = (
+				B3ADC80C16D851FE00C6BA8E /* libxml2.2.dylib */,
+				B3ADC80A16D851B700C6BA8E /* libxml2.dylib */,
+				B3ADC7CD16D84E8800C6BA8E /* hpple */,
 				B3ADC7B616D84B6E00C6BA8E /* XPathTester */,
 				B3ADC7AF16D84B6E00C6BA8E /* Frameworks */,
 				B3ADC7AE16D84B6E00C6BA8E /* Products */,
@@ -100,6 +116,19 @@
 				B3ADC7BF16D84B6E00C6BA8E /* Credits.rtf */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B3ADC7CD16D84E8800C6BA8E /* hpple */ = {
+			isa = PBXGroup;
+			children = (
+				B3ADC7E316D84E8800C6BA8E /* TFHpple.h */,
+				B3ADC7E416D84E8800C6BA8E /* TFHpple.m */,
+				B3ADC7E516D84E8800C6BA8E /* TFHppleElement.h */,
+				B3ADC7E616D84E8800C6BA8E /* TFHppleElement.m */,
+				B3ADC7EE16D84E8800C6BA8E /* XPathQuery.h */,
+				B3ADC7EF16D84E8800C6BA8E /* XPathQuery.m */,
+			);
+			path = hpple;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,6 +197,9 @@
 			files = (
 				B3ADC7BD16D84B6E00C6BA8E /* main.m in Sources */,
 				B3ADC7C416D84B6E00C6BA8E /* AppDelegate.m in Sources */,
+				B3ADC7FC16D84E8800C6BA8E /* TFHpple.m in Sources */,
+				B3ADC7FD16D84E8800C6BA8E /* TFHppleElement.m in Sources */,
+				B3ADC80316D84E8800C6BA8E /* XPathQuery.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +298,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "XPathTester/XPathPlayground-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "XPathTester/XPathPlayground-Info.plist";
 				PRODUCT_NAME = XPathPlayground;
 				WRAPPER_EXTENSION = app;
@@ -278,6 +311,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "XPathTester/XPathPlayground-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "XPathTester/XPathPlayground-Info.plist";
 				PRODUCT_NAME = XPathPlayground;
 				WRAPPER_EXTENSION = app;
