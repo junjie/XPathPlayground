@@ -11,7 +11,7 @@
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
 @property (assign) IBOutlet NSWindow *window;
-@property (unsafe_unretained) IBOutlet NSTextView *queryView;
+@property (weak) IBOutlet NSTextField *queryView;
 @property (unsafe_unretained) IBOutlet NSTextView *resultsView;
 @property (unsafe_unretained) IBOutlet NSTextView *dataView;
 
