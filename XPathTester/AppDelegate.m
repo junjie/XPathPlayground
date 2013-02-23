@@ -13,7 +13,10 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-	// Insert code here to initialize your application
+	NSFont *font = [NSFont fontWithName:@"Menlo" size:12.0];
+	self.dataView.font = font;
+	self.queryView.font = font;
+	self.resultsView.font = font;
 }
 
 - (NSArray *)XPathResultsFromString:(NSString *)string query:(NSString *)query
