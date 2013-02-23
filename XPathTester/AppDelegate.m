@@ -31,6 +31,6 @@
 - (IBAction)searchWithXPath:(id)sender {
 	NSArray *results =
 	[self XPathResultsFromString:self.dataView.string query:self.queryView.string];
-	self.resultsView.string = results.description;
+	self.resultsView.string = [results.description stringByReplacingOccurrencesOfString:@"\\n" withString:@"\n"];
 }
 @end
