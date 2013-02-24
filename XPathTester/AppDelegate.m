@@ -19,18 +19,24 @@
 	self.resultsView.font = font;
 }
 
-- (NSArray *)XPathResultsFromString:(NSString *)string query:(NSString *)query
+- (NSArray *)XPathResultsFromString:(NSString *)string query:(NSString *)query error:(NSError **)error
 {
 	NSData *stringUnicode = [string dataUsingEncoding:NSUnicodeStringEncoding];
 	TFHpple *doc = [[TFHpple alloc] initWithHTMLData:stringUnicode];
 	
-	NSArray *elements = [doc searchWithXPathQuery:query];
+	NSArray *elements = [doc searchWithXPathQuery:query error:error];
 	return elements;
 }
 
 - (IBAction)searchWithXPath:(id)sender {
+	NSError *error = nil;
 	NSArray *results =
-	[self XPathResultsFromString:self.dataView.string query:self.queryView.stringValue];
+	[self XPathResultsFromString:self.dataView.string query:self.queryView.stringValue error:&error];
 	self.resultsView.string = [results.description stringByReplacingOccurrencesOfString:@"\\n" withString:@"\n"];
+	
+	if (error)
+	{
+		self.resultsView.string = error.localizedDescription;
+	}
 }
 @end
